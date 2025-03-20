@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -31,11 +31,7 @@
             </div>
             <div class="contact-form">
                 <h2>Envie uma mensagem:</h2>
-                <form action="https://formsubmit.co/italoluc.dev@gmail.com" method="post">
-                    <!-- Disable Captcha -->
-                    <input type="hidden" name="_captcha" value="false">
-                    <!-- Redirect to a Thank You page -->
-                    <input type="hidden" name="_next" value="https://italolucio.com/thank-you.html">
+                <form action="https://formsubmit.co/0f5bb30d6fa6e5ac6b2d5789a01522f9 " method="post">
                     <label for="name">Nome:</label>
                     <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
                     <label for="email">Email:</label>
@@ -43,6 +39,11 @@
                     <label for="message">Mensagem:</label>
                     <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
                     <button type="submit" class="btn btn-primary">Enviar</button>
+                     <!-- Enable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                     <!-- Add reCAPTCHA -->
+                     <!--<div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                     <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
                 </form>
             </div>
     </section>
