@@ -416,3 +416,216 @@ footer a img:hover {
     color: #000000;
     border-color: #ffffff;
 }
+
+
+/* Hero Section */
+#hero {
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+#hero h1 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#hero p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.pixel-avatar {
+    width: 150px;
+    height: 150px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px #000, 0 0 0 8px #fff;
+}
+
+/* Skills Section */
+#skills {
+    text-align: center;
+    padding: 50px 20px;
+    color: #fff;
+}
+
+#skills h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-card {
+    background-color: #000;
+    border: 4px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+    box-shadow: 0 0 0 4px #000, 0 0 0 8px #fff;
+}
+
+.skill-card h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.skill-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9em;
+    color: #ddd;
+    margin-bottom: 10px;
+}
+
+/* Skill Level Indicator */
+.skill-level {
+    width: 100%;
+    height: 15px;
+    background-color: #333;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.skill-level .level {
+    height: 100%;
+    background-color: #00ccff;
+    position: relative;
+    overflow: hidden;
+    transition: width 0.5s ease-in-out;
+}
+
+.skill-level .level::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+    animation: shine 2s infinite;
+    pointer-events: none;
+}
+
+@keyframes shine {
+    0% {
+        left: -20%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+
+.skill-level .level {
+    height: 100%;
+    background-color: #00ccff;
+    transition: width 0.5s ease-in-out;
+}
+
+#timeline h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.timeline-item {
+    background-color: #000;
+    border: 4px solid #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: left;
+    box-shadow: 0 0 0 4px #000, 0 0 0 8px #fff;
+}
+
+.timeline-item h3 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.timeline-item p {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+#call-to-action {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #000;
+    color: #fff;
+    border: 4px solid #fff;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#call-to-action h2 {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#call-to-action p {
+    font-size: 1em;
+    margin-bottom: 20px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.cta-buttons a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+.cta-buttons .btn-primary {
+    background-color: #ffffff;
+    color: #000;
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #fff;
+    color: #000;
+}
+
+.cta-buttons a:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+}

@@ -2,7 +2,7 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name=viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Portfólio</title>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
@@ -14,24 +14,112 @@
         <img src="https://i.ibb.co/mCnmGdQv/I-1.png" alt="logo" class="logo">
         <nav>
             <ul>
-                <li><a href="../projetos.html">Projetos</a></li>
-                <li><a href="../contato.html">Contato</a></li>
+                <li><a href="../InitialScreen/portfolio.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+                <li><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="Quem sou eu?">
-        <h1>Sobre</h1>
-        <p>Olá, meu nome é <strong>Ítalo Lúcio</strong> e atualmente estou estudando para me tornar um desenvolvedor full stack.</p>
-        <p>Curto jogos, séries, filmes, animes, música e, desde um certo tempo, tenho gostado bastante de estudar também</p>
-        <p>De certa forma, estudar (seja programação, ou idiomas), se tornou um hobby para mim.</p>
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Bem-vindo ao Meu Portfólio</h1>
+        <p>Olá, sou um aspirante a desenvolvedor full stack apaixonado por tecnologia, jogos e música.</p>
+        <!--img src="https://i.ibb.co/album-placeholder.png" alt="Pixel Art Avatar" class="pixel-avatar">-->
     </section>
+
+<!-- Skills Section -->
+<section id="skills">
+    <h2>Minhas Habilidades</h2>
+    <div class="skills-grid">
+        <div class="skill-card">
+            <h3>HTML</h3>
+            <img src="https://img.icons8.com/?size=100&id=20909&format=png" alt="HTML Icon">
+            <p>Nível: Avançado</p>
+            <div class="skill-level">
+                <div class="level" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>CSS</h3>
+            <img src="https://img.icons8.com/?size=100&id=21278&format=png" alt="CSS Icon">
+            <p>Nível: Avançado</p>
+            <div class="skill-level">
+                <div class="level" style="width: 80%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>JavaScript</h3>
+            <img src="https://img.icons8.com/?size=100&id=108784&format=png" alt="JavaScript Icon">
+            <p>Nível: Intermediário</p>
+            <div class="skill-level">
+                <div class="level" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>Git</h3>
+            <img src="https://img.icons8.com/?size=100&id=74402&format=png" alt="Git Icon">
+            <p>Nível: Intermediário</p>
+            <div class="skill-level">
+                <div class="level" style="width: 60%;"></div>
+            </div>
+        </div>
+        <div class="skill-card">
+            <h3>GML</h3>
+            <img src="https://img.icons8.com/?size=100&id=34299&format=png&color=000000" alt="GML Icon">
+            <p>Nível: Básico</p>
+            <div class="skill-level">
+                <div class="level" style="width: 50%;"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Timeline Section -->
+    <section id="timeline">
+        <h2>Minha Jornada</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3>2023</h3>
+                <p>Comecei a estudar desenvolvimento web e me apaixonei por programação.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2024</h3>
+                <p>Desenvolvi meus primeiros projetos e comecei a explorar frameworks.</p>
+            </div>
+            <div class="timeline-item">
+                <h3>2025</h3>
+                <p>Trabalhando em projetos mais complexos e colaborativos.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="call-to-action">
+        <h2>Gostou do que viu?</h2>
+        <p>Pede um orçamento aí!</p>
+        <div class="cta-buttons">
+            <a href="../projetos.html" class="btn btn-primary">Ver Projetos</a>
+            <a href="../contato.html" class="btn btn-secondary">Entrar em Contato</a>
+        </div>
+    </section>
+
+    <script>
+        const skillLevels = document.querySelectorAll('.level');
+    
+        window.addEventListener('scroll', () => {
+            skillLevels.forEach(level => {
+                const rect = level.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    level.style.width = level.getAttribute('style').split(':')[1];
+                }
+            });
+        });
+    </script>
 
     <footer>
         <p>Desenvolvido por Ítalo Lúcio</p>
         <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;"></a>
         <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;"></a>
     </footer>
-
 </body>
 </html>
