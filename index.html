@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bem-vindo ao Meu Portfólio</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <iframe src="background.html" frameborder="0" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" scrolling="no"></iframe>
+    <section id="intro" class="d-flex justify-content-center align-items-center text-center">
+        <div class="intro-content">
+            <div class="blur-background"></div>
+            <h1>Ítalo Lúcio</h1>
+            <p>Meu nome é Ítalo Lúcio e vos apresento o meu portfólio</p>
+            <button id="intro-button" class="btn btn-primary">Dar uma olhada</button>
+        </div>
+    </section>
+    <script>
+        const button = document.getElementById('intro-button');
+        const introSection = document.getElementById('intro');
+
+        button.addEventListener('click', function () {
+            // Add the fade-out class to the intro section
+            introSection.classList.add('fade-out');
+
+            // Wait for the animation to complete before redirecting
+            setTimeout(() => {
+                window.location.href = 'InitialScreen/portfolio.html';
+            }, 1000); // Match the duration of the fade-out animation
+        });
+    </script>
+</body>
+</html>

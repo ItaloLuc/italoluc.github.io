@@ -1,0 +1,56 @@
+!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Meu Portfólio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fade-in">
+    <iframe src="../background.html" frameborder="0" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" scrolling="no"></iframe>
+    <header>
+        <div class="blur-background-index"></div>
+        <img src="https://i.ibb.co/mCnmGdQv/I-1.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="../InitialScreen/portfolio.html">Sobre</a></li>
+                <li><a href="projetos.html">Projetos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contato">
+        <h1>Entre em Contato</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Me encontre aqui:</h2>
+                <p><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="LinkedIn" class="icon"> <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/">LinkedIn</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" class="icon"> <a href="https://github.com/ItaloLucio">GitHub</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A" alt="Email" class="icon"> <a href="mailto:italoluc.dev@gmail.com">italoluc.dev@gmail.com</a></p>
+            </div>
+            <div class="contact-form">
+                <h2>Envie uma mensagem:</h2>
+                <form action="https://formsubmit.co/italoluc.dev@gmail.com" method="post">
+                    <!-- Disable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Redirect to a Thank You page -->
+                    <input type="hidden" name="_next" value="https://italolucio.com/thank-you.html">
+                    <label for="name">Nome:</label>
+                    <input type="text" id="name" name="name" placeholder="Digite seu nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Digite seu email" required>
+                    <label for="message">Mensagem:</label>
+                    <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+            </div>
+    </section>
+
+    <footer>
+        <p>Desenvolvido por Ítalo Lúcio</p>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;"></a>
+        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;"></a>
+    </footer>
+</body>
+</html>
