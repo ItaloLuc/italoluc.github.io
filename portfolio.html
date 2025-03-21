@@ -34,17 +34,17 @@
         <div class="skill-card">
             <h3>HTML</h3>
             <img src="https://img.icons8.com/?size=100&id=20909&format=png" alt="HTML Icon">
-            <p>Nível: Avançado</p>
+            <p>Nível: Intermediário</p>
             <div class="skill-level">
-                <div class="level" style="width: 90%;"></div>
+                <div class="level" style="width: 60"></div>
             </div>
         </div>
         <div class="skill-card">
             <h3>CSS</h3>
             <img src="https://img.icons8.com/?size=100&id=21278&format=png" alt="CSS Icon">
-            <p>Nível: Avançado</p>
+            <p>Nível: Intermediário</p>
             <div class="skill-level">
-                <div class="level" style="width: 80%;"></div>
+                <div class="level" style="width: 60%;"></div>
             </div>
         </div>
         <div class="skill-card">
@@ -52,7 +52,7 @@
             <img src="https://img.icons8.com/?size=100&id=108784&format=png" alt="JavaScript Icon">
             <p>Nível: Intermediário</p>
             <div class="skill-level">
-                <div class="level" style="width: 70%;"></div>
+                <div class="level" style="width: 60%;"></div>
             </div>
         </div>
         <div class="skill-card">
@@ -68,7 +68,7 @@
             <img src="https://img.icons8.com/?size=100&id=34299&format=png&color=000000" alt="GML Icon">
             <p>Nível: Intermediário</p>
             <div class="skill-level">
-                <div class="level" style="width: 50%;"></div>
+                <div class="level" style="width: 60%;"></div>
             </div>
         </div>
         <div class="skill-card">
@@ -76,7 +76,7 @@
             <img src="https://img.icons8.com/?size=100&id=13441&format=png&color=000000" alt="GML Icon">
             <p>Nível: Básico</p>
             <div class="skill-level">
-                <div class="level" style="width: 50%;"></div>
+                <div class="level" style="width: 30%;"></div>
             </div>
         </div>
         <div class="skill-card">
@@ -84,7 +84,7 @@
             <img src="https://img.icons8.com/?size=100&id=13679&format=png&color=000000" alt="GML Icon">
             <p>Nível: Básico</p>
             <div class="skill-level">
-                <div class="level" style="width: 50%;"></div>
+                <div class="level" style="width: 30%;"></div>
             </div>
         </div>
         
@@ -120,6 +120,7 @@
     </section>
 
     <script>
+
         const skillLevels = document.querySelectorAll('.level');
     
         window.addEventListener('scroll', () => {
@@ -158,6 +159,30 @@
 
         // Display the random quote in the hero section
         document.getElementById('quote').textContent = `"${randomQuote}"`;
+
+        // Map skill levels to progress percentages
+        const levelMapping = {
+            "Básico": "30%",
+            "Intermediário": "60%",
+            "Avançado": "90%"
+        };
+
+        // Get all skill cards
+        const skillCards = document.querySelectorAll('.skill-card');
+
+        skillCards.forEach(card => {
+            // Get the level from the data attribute
+            const level = card.getAttribute('data-level');
+
+            // Get the corresponding progress percentage
+            const progress = levelMapping[level];
+
+            // Set the width of the progress bar
+            const progressBar = card.querySelector('.level');
+            if (progressBar) {
+                progressBar.style.width = progress;
+            }
+        });
 
     </script>
 
