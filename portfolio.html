@@ -21,11 +21,11 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
-        <h1>Um aspirante a músico, apaixonado por tecnologia e jogos!</h1>
-        <p>"If you’re not scared, you’re not taking a chance, and if you’re not taking a chance, then what the hell are you doing?".</p>
-        <!--img src="https://i.ibb.co/album-placeholder.png" alt="Pixel Art Avatar" class="pixel-avatar">-->
-    </section>
+        <section id="hero">
+            <h1>Bem-vindo ao Meu Portfólio</h1>
+            <p id="quote"></p>
+            <!--img src="https://i.ibb.co/album-placeholder.png" alt="Pixel Art Avatar" class="pixel-avatar"-->
+        </section>
 
 <!-- Skills Section -->
 <section id="skills">
@@ -66,7 +66,7 @@
         <div class="skill-card">
             <h3>GML</h3>
             <img src="https://img.icons8.com/?size=100&id=34299&format=png&color=000000" alt="GML Icon">
-            <p>Nível: Básico</p>
+            <p>Nível: Intermediário</p>
             <div class="skill-level">
                 <div class="level" style="width: 50%;"></div>
             </div>
@@ -88,7 +88,7 @@
             </div>
             <div class="timeline-item">
                 <h3>2025</h3>
-                <p>Trabalhando em projetos mais complexos e colaborativos.</p>
+                <p>Comecei minha jornada freelancer.</p>
             </div>
         </div>
     </section>
@@ -113,7 +113,38 @@
                 }
             });
         });
+
+            // List of inspirational quotes
+        const quotes = [
+            "Grandes coisas nunca vêm da zona de conforto.",
+            "A criatividade é a inteligência se divertindo.",
+            "O único limite para o seu impacto é a sua imaginação e esforço.",
+            "O sucesso é a soma de pequenos esforços repetidos dia após dia.",
+            "A tecnologia move o mundo, mas a paixão move a tecnologia.",
+            "Se você pode sonhar, você pode fazer.",
+            "A persistência é o caminho do êxito.",
+            "Acredite em si mesmo e todo o resto se encaixará.",
+            "Se você não está com medo, você não está se arriscando, e se você não está se arriscando, então que merda você está fazendo?",
+            "Quando a vida te decepciona, qual é a solução? Simplesmente continue a nadar.",
+            "Sim, o passado pode machucar. Mas, do modo como vejo, você pode fugir dele ou aprender com ele.",
+            "O necessário não é apenas para se suportar, menos ainda para se ocultar – todo o idealismo é mentira perante o necessário – mas para o amar",
+            "A vida é uma peça de teatro que não permite ensaios. Por isso, cante, chore, dance, ria e viva intensamente, antes que a cortina se feche e a peça termine sem aplausos.",
+            "Um relógio quebrado está certo duas vezes por dia.",
+            "Se você for tentar, tente de verdade. Caso contrário nem comece. Isso pode significar perder tudo. E talvez até sua cabeça. Isso pode significar não comer nada por três ou quatro dias. Isso pode significar congelar num banco de praça. Isso pode significar escárnio, isolamento. Isolamento é uma dádiva. Todo o resto é teste da sua resistência. De quanto você realmente quer fazer isso. E você vai fazer isso, enfrentando rejeições das piores espécies. E isso será melhor do que qualquer coisa que você já imaginou. Se você for tentar, tente de verdade. Não há outro sentimento melhor que isso. Você estará sozinho com os deuses. E as noites vão arder em chamas. Você levará sua vida direto para a risada perfeita. Esta é a única briga boa que existe.",
+            "Que importa o mal que te atormenta, se o sonho te contenta e pode realizar-se?",
+            "Talvez esse seja o maior risco que podemos correr, sermos vistos como somos de verdade.",
+            "Ninguém ia me entregar o meu futuro de mão beijada, alcançar o meu sonho dependia de mim, segurá-lo com força e torná-lo realidade.",
+        ];
+
+        // Select a random quote
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+
+        // Display the random quote in the hero section
+        document.getElementById('quote').textContent = `"${randomQuote}"`;
+
     </script>
+
+
 
     <footer>
         <p>Desenvolvido por Ítalo Lúcio</p>
