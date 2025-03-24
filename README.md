@@ -36,18 +36,29 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 
 3. Open the index.html file in your browser to view the portfolio.
 
-📂 Project Structure
+#
 
-Portfólio/
-├── docs/
-│   ├── index.html          # Landing page
-├── InitialScreen/
-│   ├── portfolio.html      # Main portfolio page
-│   ├── [projetos.html](http://_vscodecontentref_/0)       # Projects page
-│   ├── [contato.html](http://_vscodecontentref_/1)        # Contact page
-├── [style.css](http://_vscodecontentref_/2)               # Global styles
-├── [background.html](http://_vscodecontentref_/3)         # Background animations
-├── README.md               # Project documentation
+## 📂 Project Structure
+
+Portfólio/ 
+
+├── 📁 docs
+  
+    ├──  /📄 index.html # Landing page
+
+├── 📁 InitialScreen/
+    
+    ├── 📄 portfolio.html # Main portfolio page
+
+    ├── 🔗 projetos.html # Projects page
+
+    ├── 🔗 contato.html # Contact page
+
+    ├── 🎨 🔗 style.css # Global styles
+
+    ├── 🌌 🔗 background.html # Background animations
+
+    ├── 📖 README.md # Project documentation
 
 
 ## ✨ Highlights
