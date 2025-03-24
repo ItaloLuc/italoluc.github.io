@@ -38,7 +38,7 @@ Welcome to my personal portfolio! This project showcases my skills, projects, an
 
 📂 Project Structure
 
-    Portfólio/
+Portfólio/
 ├── docs/
 │   ├── index.html          # Landing page
 ├── InitialScreen/
