@@ -20,6 +20,8 @@
         </nav>
     </header>
 
+    
+
     <!-- Hero Section -->
         <section id="hero">
             <h1>Bem-vindo ao Meu Portfólio</h1>
@@ -121,10 +123,14 @@
         <h2>Gostou do que viu?</h2>
         <p>Pede um orçamento aí!</p>
         <div class="cta-buttons">
-            <a href="../projetos.html" class="btn btn-primary">Ver Projetos</a>
-            <a href="../contato.html" class="btn btn-secondary">Entrar em Contato</a>
+            <a href="../projetos.html" class="btn btn-primary" onclick="playSound()">Ver Projetos</a>
+            <a href="../contato.html" class="btn btn-secondary" onclick="playSound()">Entrar em Contato</a>
         </div>
     </section>
+
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
 
     <script>
 
@@ -190,6 +196,12 @@
                 progressBar.style.width = progress;
             }
         });
+
+        function playSound() {
+            const audio = document.getElementById("hover-sound");
+            audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+            audio.play();
+        }
         
 
     </script>

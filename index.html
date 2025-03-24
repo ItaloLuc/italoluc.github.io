@@ -15,9 +15,18 @@
             <div class="blur-background"></div>
             <h1>Ítalo Lúcio</h1>
             <p>O melhor portfólio do mundo! Talvez até do brasil!</p>
-            <button id="intro-button" class="btn btn-primary">Dar uma olhada</button>
+            <button id="intro-button" class="btn btn-primary" onmouseenter="playSound()" onclick="playSoundClick()">Dar uma olhada</button>
         </div>
     </section>
+
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="click-sound">
+        <source src="sounds/transition.wav" type="audio/wav">
+    </audio>
+    
     <script>
         const button = document.getElementById('intro-button');
         const introSection = document.getElementById('intro');
@@ -33,6 +42,18 @@
 
             
         });
+
+        function playSound() {
+            const audio = document.getElementById("hover-sound");
+            audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+            audio.play();
+        }
+
+        function playSoundClick() {
+            const audio = document.getElementById("click-sound");
+            audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+            audio.play();
+        }
     </script>
 </body>
 </html>
