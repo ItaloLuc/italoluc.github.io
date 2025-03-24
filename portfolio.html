@@ -123,13 +123,22 @@
         <h2>Gostou do que viu?</h2>
         <p>Pede um orçamento aí!</p>
         <div class="cta-buttons">
-            <a href="../projetos.html" class="btn btn-primary" onclick="playSound()">Ver Projetos</a>
-            <a href="../contato.html" class="btn btn-secondary" onclick="playSound()">Entrar em Contato</a>
+            <a href="../projetos.html" class="btn btn-primary" onmouseenter="playSoundHover2()" onclick="Button()">Ver Projetos</a>
+            <a href="../contato.html" class="btn btn-secondary" onmouseenter="playSoundHover2()" onclick="playSoundButton()">Entrar em Contato</a>
+
         </div>
     </section>
 
     <audio id="hover-sound">
         <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hover-sound2">
+        <source src="sounds/hover2.wav" type="audio/wav">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="sounds/button.wav" type="audio/wav">
     </audio>
 
     <script>
@@ -197,11 +206,25 @@
             }
         });
 
-        function playSound() {
+        function playSoundHover2() {
+        const audio = document.getElementById("hover-sound2");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundHover() {
             const audio = document.getElementById("hover-sound");
             audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
             audio.play();
         }
+
+        function playSoundButton(event) {
+        event.preventDefault(); // Impede o redirecionamento imediato
+        const sound = document.getElementById("button-sound");
+        sound.currentTime = 0.5;
+        sound.play();
+        
+    }
         
 
     </script>
@@ -210,8 +233,8 @@
 
     <footer>
         <p>Desenvolvido por Ítalo Lúcio</p>
-        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;"></a>
-        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;"></a>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton2()"></a>   
     </footer>
 </body>
 </html>

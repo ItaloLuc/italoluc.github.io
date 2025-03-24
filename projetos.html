@@ -23,33 +23,67 @@
     <section id="projetos">
         <h1>Meus Projetos</h1>
         <div class="projects-grid">
-            <div class="project-card">
+            <div class="project-card" onmouseenter="playSoundHover2()">
                 <h2>Projeto 1</h2>
                 <p>Descrição breve do projeto 1.</p>
-                <a href="#" class="btn btn-primary">Ver mais</a>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">Ver mais</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" onmouseenter="playSoundHover2()">
                 <h2>Projeto 2</h2>
                 <p>Descrição breve do projeto 2.</p>
-                <a href="#" class="btn btn-primary">Ver mais</a>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">Ver mais</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" onmouseenter="playSoundHover2()">
                 <h2>Projeto 3</h2>
                 <p>Descrição breve do projeto 3.</p>
-                <a href="#" class="btn btn-primary">Ver mais</a>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">Ver mais</a>
             </div>
-            <div class="project-card">
+            <div class="project-card" onmouseenter="playSoundHover2()">
                 <h2>Projeto 4</h2>
                 <p>Descrição breve do projeto 4.</p>
-                <a href="#" class="btn btn-primary">Ver mais</a>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">Ver mais</a>
             </div>
         </div>
     </section>
 
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hover-sound2">
+        <source src="sounds/hover2.wav" type="audio/wav">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="sounds/button.wav" type="audio/wav">
+    </audio>
+
+    <script>
+
+        function playSoundHover2() {
+        const audio = document.getElementById("hover-sound2");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundHover() {
+        const audio = document.getElementById("hover-sound");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundButton(event) {
+        event.preventDefault(); // Impede o redirecionamento imediato
+        const sound = document.getElementById("button-sound");
+        sound.currentTime = 0.5;
+        sound.play();
+        }
+    </script>
+
     <footer>
         <p>Desenvolvido por Ítalo Lúcio</p>
-        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;"></a>
-        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;"></a>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
     </footer>
 </body>
 </html>

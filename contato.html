@@ -38,20 +38,57 @@
                     <input type="email" id="email" name="email" placeholder="Digite seu email" required>
                     <label for="message">Mensagem:</label>
                     <textarea id="message" name="message" placeholder="Digite sua mensagem" required></textarea>
-                    <button type="submit" class="btn btn-primary">Enviar</button>
+                    <button type="submit" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()" >Enviar</button>
                      <!-- Enable Captcha -->
                     <input type="hidden" name="_captcha" value="false">
                      <!-- Add reCAPTCHA -->
                      <!--<div class="g-recaptcha" data-sitekey="your-site-key"></div>
                      <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
                 </form>
+                <p id="success-message" style="display: none; color: #00ff00; font-family: 'Press Start 2P', cursive; margin-top: 20px;">
+                    Sua mensagem foi enviada com sucesso! Obrigado por entrar em contato.
+                </p>
             </div>
     </section>
 
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hover-sound2">
+        <source src="sounds/hover2.wav" type="audio/wav">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="sounds/button.wav" type="audio/wav">
+    </audio>
+
+    <script>
+
+        function playSoundHover2() {
+        const audio = document.getElementById("hover-sound2");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundHover() {
+        const audio = document.getElementById("hover-sound");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundButton(event) {
+        event.preventDefault(); // Impede o redirecionamento imediato
+        const sound = document.getElementById("button-sound");
+        sound.currentTime = 0.5;
+        sound.play();
+        }
+    </script>
+
     <footer>
         <p>Desenvolvido por Ítalo Lúcio</p>
-        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;"></a>
-        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;"></a>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+        <a href="https://github.com/ItaloLucio"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
     </footer>
 </body>
 </html>

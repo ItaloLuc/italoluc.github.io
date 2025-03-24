@@ -15,7 +15,7 @@
             <div class="blur-background"></div>
             <h1>Ítalo Lúcio</h1>
             <p>O melhor portfólio do mundo! Talvez até do brasil!</p>
-            <button id="intro-button" class="btn btn-primary" onmouseenter="playSound()" onclick="playSoundClick()">Dar uma olhada</button>
+            <button id="intro-button" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundClick()">Dar uma olhada</button>
         </div>
     </section>
 
@@ -43,7 +43,7 @@
             
         });
 
-        function playSound() {
+        function playSoundHover() {
             const audio = document.getElementById("hover-sound");
             audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
             audio.play();
