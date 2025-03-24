@@ -10,3 +10,12 @@ document.querySelectorAll('nav a').forEach(anchor => {
         });
     });
 });
+
+// Play sound effect when "Dar uma olhada" is clicked
+document.getElementById('intro-button').addEventListener('click', () => {
+    console.log('Button clicked!'); // Debugging log
+    const audio = new Audio('Sounds/transition.wav'); // Path to the sound file
+    audio.play().catch(error => {
+        console.error('Audio playback failed:', error); // Log playback errors
+    });
+});
