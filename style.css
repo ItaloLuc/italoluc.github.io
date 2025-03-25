@@ -5,6 +5,7 @@ body, h1, h2, p, ul, li {
     list-style: none;
 }
 
+
 /*Define a fonte padrão do documento como Arial, sans-serif, e define o line-height como 1.6, que é um valor recomendado para facilitar a leitura do texto.*/
 body{
     line-height: 1.6;
