@@ -25,9 +25,9 @@
         <div class="contact-container">
             <div class="contact-info">
                 <h2>Find me here:</h2>
-                <p><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="LinkedIn" class="icon"> <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/">LinkedIn</a></p>
-                <p><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" class="icon"> <a href="https://github.com/ItaloLucio">GitHub</a></p>
-                <p><img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A" alt="Email" class="icon"> <a href="mailto:italoluc.dev@gmail.com">italoluc.dev@gmail.com</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="LinkedIn" class="icon"> <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/" onmouseenter="playSoundHover2()">LinkedIn</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" class="icon"> <a href="https://github.com/ItaloLucio" onmouseenter="playSoundHover2()">GitHub</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A" alt="Email" class="icon"> <a href="mailto:italoluc.dev@gmail.com" onmouseenter="playSoundHover2()">italoluc.dev@gmail.com</a></p>
             </div>
             <div class="contact-form">
                 <h2>Send a message:</h2>
@@ -63,27 +63,8 @@
         <source src="sounds/button.wav" type="audio/wav">
     </audio>
 
-    <script>
 
-        function playSoundHover2() {
-        const audio = document.getElementById("hover-sound2");
-        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
-        audio.play();
-        }
-
-        function playSoundHover() {
-        const audio = document.getElementById("hover-sound");
-        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
-        audio.play();
-        }
-
-        function playSoundButton(event) {
-        event.preventDefault(); // Prevent immediate redirection
-        const sound = document.getElementById("button-sound");
-        sound.currentTime = 0.5;
-        sound.play();
-        }
-    </script>
+    <script src="js/contact.js" defer></script>
 
     <footer>
         <p>Developed by Ítalo Lúcio</p>
