@@ -27,6 +27,34 @@ body{
     z-index: -1;
 }
 
+#language-switcher {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 10; /* Ensure it appears above other elements */
+}
+
+#language-switcher .btn {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    margin-left: 5px;
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+#language-switcher .btn-secondary {
+    background-color: #fff;
+    color: #000;
+}
+
+#language-switcher .btn-secondary:hover {
+    transform: scale(1.1);
+    background-color: #000;
+    color: #fff;
+}
 
 
 /*Define o estilo do cabeçalho do site, com um fundo escuro, texto branco e um espaçamento interno de 10px na vertical e 20px na horizontal.*/

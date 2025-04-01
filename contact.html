@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fade-in">
+    <iframe src="background.html" frameborder="0" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" scrolling="no"></iframe>
+    <header>
+        <div class="blur-background-index"></div>
+        <img src="https://i.ibb.co/mCnmGdQv/I-1.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="portfolio-en.html" onmouseenter="playSoundHover2()" onclick="playSoundButton()">About</a></li>
+                <li><a href="projects.html" onmouseenter="playSoundHover2()" onclick="playSoundButton()">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contato">
+        <h1>Get in Touch</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Find me here:</h2>
+                <p><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="LinkedIn" class="icon"> <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/">LinkedIn</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" class="icon"> <a href="https://github.com/ItaloLucio">GitHub</a></p>
+                <p><img src="https://img.icons8.com/?size=100&id=Y2GfpkgYNp42&format=png&color=1A1A1A" alt="Email" class="icon"> <a href="mailto:italoluc.dev@gmail.com">italoluc.dev@gmail.com</a></p>
+            </div>
+            <div class="contact-form">
+                <h2>Send a message:</h2>
+                <form action="https://formsubmit.co/0f5bb30d6fa6e5ac6b2d5789a01522f9 " method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+                    <button type="submit" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">Send</button>
+                     <!-- Enable Captcha -->
+                    <input type="hidden" name="_captcha" value="false">
+                     <!-- Add reCAPTCHA -->
+                     <!--<div class="g-recaptcha" data-sitekey="your-site-key"></div>
+                     <script src="https://www.google.com/recaptcha/api.js" async defer></script> -->
+                </form>
+                <p id="success-message" style="display: none; color: #00ff00; font-family: 'Press Start 2P', cursive; margin-top: 20px;">
+                    Your message has been sent successfully! Thank you for getting in touch.
+                </p>
+            </div>
+    </section>
+
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hover-sound2">
+        <source src="sounds/hover2.wav" type="audio/wav">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="sounds/button.wav" type="audio/wav">
+    </audio>
+
+    <script>
+
+        function playSoundHover2() {
+        const audio = document.getElementById("hover-sound2");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundHover() {
+        const audio = document.getElementById("hover-sound");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundButton(event) {
+        event.preventDefault(); // Prevent immediate redirection
+        const sound = document.getElementById("button-sound");
+        sound.currentTime = 0.5;
+        sound.play();
+        }
+    </script>
+
+    <footer>
+        <p>Developed by Ítalo Lúcio</p>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="Linkedin" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+        <a href="https://github.com/ItaloLuc"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+    </footer>
+</body>
+</html>

@@ -14,9 +14,17 @@
         <div class="intro-content">
             <div class="blur-background"></div>
             <h1>Ítalo Lúcio</h1>
-            <p>O melhor portfólio do mundo! Talvez até do brasil!</p>
+            <p>Espero que goste do que vai ver!</p>
             <button id="intro-button" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundClick()">Dar uma olhada</button>
         </div>
+
+        <div id="language-switcher" class="d-flex justify-content-center mt-3">
+            <button id="btn-en" class="btn btn-secondary" onmouseenter="playSoundHover()" onclick="playSoundClick()">English</button>
+            <button id="btn-pt" class="btn btn-secondary" onmouseenter="playSoundHover()" onclick="playSoundClick()">Português</button>
+        </div>
+
+        
+
     </section>
 
     <audio id="hover-sound">
@@ -28,6 +36,20 @@
     </audio>
     
     <script>
+
+    const translations = {
+        en: {
+            introTitle: "Welcome to My Portfolio",
+            introSubtitle: "I hope you like what you see!",
+            buttonText: "Take a look",
+        },
+        pt: {
+            introTitle: "Bem-vindo ao Meu Portfólio",
+            introSubtitle: "Espero que você goste do que vê!",
+            buttonText: "Dar uma olhada",
+        },
+    };
+
         const button = document.getElementById('intro-button');
         const introSection = document.getElementById('intro');
 
@@ -54,6 +76,53 @@
             audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
             audio.play();
         }
+
+        function setLanguage(language) {
+            const elements = {
+                introTitle: document.querySelector("#intro h1"),
+                introSubtitle: document.querySelector("#intro p"),
+                buttonText: document.querySelector("#intro-button"),
+            };
+
+            const translation = translations[language];
+            elements.introTitle.textContent = translation.introTitle;
+            elements.introSubtitle.textContent = translation.introSubtitle;
+            elements.buttonText.textContent = translation.buttonText;
+
+            // Update the redirect URL for the "Take a Look" button
+            const button = document.getElementById("intro-button");
+            const redirectUrl = language === "en" ? "portfolio-en.html" : "portfolio.html";
+
+            // Remove any existing event listeners to avoid duplicates
+            const newButton = button.cloneNode(true);
+            button.parentNode.replaceChild(newButton, button);
+
+            newButton.addEventListener("click", (event) => {
+                event.preventDefault(); // Prevent default behavior
+                redirectToPortfolio(redirectUrl);
+            });
+
+            // Save the selected language to localStorage
+            localStorage.setItem("selectedLanguage", language);
+        }
+        
+
+        // Load the saved language from localStorage or default to Portuguese
+        const savedLanguage = localStorage.getItem("selectedLanguage") || "pt";
+        setLanguage(savedLanguage);
+
+        // Add event listeners to the language switcher buttons
+        document.getElementById("btn-en").addEventListener("click", () => setLanguage("en"));
+        document.getElementById("btn-pt").addEventListener("click", () => setLanguage("pt"));
+
+        function redirectToPortfolio(url) {
+            const introSection = document.getElementById("intro");
+            introSection.classList.add("fade-out"); // Add fade-out animation
+            setTimeout(() => {
+                window.location.href = url; // Redirect after animation
+            }, 1000); // Match the fade-out animation duration
+        }
+                        
     </script>
 </body>
 </html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - My Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fade-in">
+    <iframe src="background.html" frameborder="0" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;" scrolling="no"></iframe>
+    <header>
+        <div class="blur-background-index"></div>
+        <img src="https://i.ibb.co/mCnmGdQv/I-1.png" alt="logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="portfolio-en.html" onmouseenter="playSoundHover2()" onclick="playSoundButton()">About</a></li>
+                <li><a href="contact.html" onmouseenter="playSoundHover2()" onclick="playSoundButton()">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="projects">
+        <h1>My Projects</h1>
+        <div class="projects-grid">
+            <div class="project-card" onmouseenter="playSoundHover2()">
+                <h style="font-size: 25px;">Task List</h>
+                <p style="font-size: 10px;">A simple task list made with HTML, CSS, and JavaScript.</p>
+                <a href="https://github.com/ItaloLuc/TaskList" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">See more</a>
+            </div>
+            <div class="project-card" onmouseenter="playSoundHover2()">
+                <h2 style="font-size: 25px;">Checklist</h2>
+                <p style="font-size: 8px;">A checklist system for IT technical support.</p>
+                <a href="https://github.com/ItaloLuc/Sistema-de-Checklist" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">See more</a>
+            </div>
+            <div class="project-card" onmouseenter="playSoundHover2()">
+                <h2 style="font-size: 25px;">Project 3</h2>
+                <p style="font-size: 10px;">Brief description of project 3.</p>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">See more</a>
+            </div>
+            <div class="project-card" onmouseenter="playSoundHover2()">
+                <h2 style="font-size: 25px;">Project 4</h2>
+                <p style="font-size: 10px;">Brief description of project 4.</p>
+                <a href="#" class="btn btn-primary" onmouseenter="playSoundHover()" onclick="playSoundButton()">See more</a>
+            </div>
+        </div>
+    </section>
+
+    <audio id="hover-sound">
+        <source src="sounds/hover.wav" type="audio/wav">
+    </audio>
+
+    <audio id="hover-sound2">
+        <source src="sounds/hover2.wav" type="audio/wav">
+    </audio>
+
+    <audio id="button-sound">
+        <source src="sounds/button.wav" type="audio/wav">
+    </audio>
+
+    <script>
+
+        function playSoundHover2() {
+        const audio = document.getElementById("hover-sound2");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundHover() {
+        const audio = document.getElementById("hover-sound");
+        audio.volume = 0.2; // Set the volume level (0.0 to 1.0)
+        audio.play();
+        }
+
+        function playSoundButton(event) {
+        event.preventDefault(); // Prevent immediate redirection
+        const sound = document.getElementById("button-sound");
+        sound.currentTime = 0.5;
+        sound.play();
+        }
+    </script>
+
+    <footer>
+        <p>Developed by Ítalo Lúcio</p>
+        <a href="https://www.linkedin.com/in/%C3%ADtalo-l%C3%BAcio-52092a1a2/"><img src="https://img.icons8.com/?size=100&id=98960&format=png&color=000000" alt="LinkedIn" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+        <a href="https://github.com/ItaloLuc"><img src="https://img.icons8.com/?size=100&id=16318&format=png&color=000000" alt="GitHub" style="width: 24px; height: 24px;" onmouseenter="playSoundHover2()" onclick="playSoundButton()"></a>
+    </footer>
+</body>
+</html>
