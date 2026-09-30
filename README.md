@@ -1,83 +1,24 @@
-# Ítalo Lúcio's Portfolio
+# Ítalo Lúcio — Portfolio
 
-Welcome to my personal portfolio! This project showcases my skills, projects, and journey as an aspiring full-stack developer. It is designed with a retro pixel art aesthetic, inspired by my love for games, music, and technology.
+Personal portfolio with a complete Portuguese and English experience. Built with HTML, CSS and JavaScript, hosted on GitHub Pages.
 
----
+## Run locally
 
-## 🌟 Features
+```bash
+python3 -m http.server 8000
+```
 
-- **Hero Section**: A welcoming introduction with a pixel art avatar.
-- **Skills Section**: A grid of skill cards with animated progress bars and a shining effect.
-- **Timeline Section**: A visual representation of my learning and career journey.
-- **Projects Section**: A showcase of my projects with interactive cards.
-- **Contact Section**: A form to send messages directly to my email and links to my social profiles.
-- **Call to Action**: Encourages visitors to explore my projects or get in touch.
-- **Responsive Design**: Fully responsive and optimized for all devices.
+Open http://localhost:8000. No build step or package installation required.
 
----
+## Structure
 
-## 🛠️ Technologies Used
+- `index.html`: Portuguese portfolio.
+- `portfolio-en.html`: English portfolio.
+- `style.css`: responsive layout and visual identity.
+- `js/main.js`: mobile navigation, project filters and email copy.
+- `favicon.svg`, `social-preview.png`: browser and sharing assets.
+- Legacy page URLs redirect to the corresponding sections.
 
-- **HTML5**: For structuring the content.
-- **CSS3**: For styling, animations, and responsive design.
-- **JavaScript**: For interactivity and animations.
-- **FormSubmit**: For handling contact form submissions.
-- **Icons8**: For pixel art icons.
+Project illustrations are original visual studies, not screenshots of the live products. Links lead to the actual platform or public source repository. Contact uses an email link, without a third-party form service.
 
----
-
-## 🚀 How to Run the Project
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/ItaloLucio/portfolio.git
-
-2. Navigate to the project directory:
-
-3. Open the index.html file in your browser to view the portfolio.
-
-#
-
-## 📂 Project Structure
-
-Portfólio/ 
-
-├── 📁 docs
-  
-    ├──  /📄 index.html # Landing page
-
-├── 📁 InitialScreen/
-    
-    ├── 📄 portfolio.html # Main portfolio page
-
-    ├── 🔗 projetos.html # Projects page
-
-    ├── 🔗 contato.html # Contact page
-
-    ├── 🎨 🔗 style.css # Global styles
-
-    ├── 🌌 🔗 background.html # Background animations
-
-    ├── 📖 README.md # Project documentation
-
-
-## ✨ Highlights
-Progress Bars: Animated progress bars with a shining effect to represent skill levels.
-Pixel Art Design: Retro-inspired design with pixel art icons and fonts.
-Interactive Elements: Hover effects, animations, and smooth transitions.
-Particles Effect: Dynamic particles on progress bars for added visual appeal.
-
-
-## 📧 Contact
-Feel free to reach out to me via:
-
-Email: italoluc.dev@gmail.com
-LinkedIn: Ítalo Lúcio
-GitHub: ItaloLucio
-
-
-## 📝 License
-This project is open-source and available under the MIT License.
-
-## 🎮 Fun Fact
-I love competitive games (like MOBA), retro games, and composing music in my free time. This portfolio reflects my passion for creativity and technology!
+The interface supports keyboard navigation, reduced motion, mobile screens and use without JavaScript (all project content and contact links remain available).
